@@ -3,12 +3,15 @@
  */
 angular.module('css3ExperimentsApp')
 	.controller('MainCtrl',['$scope','$swipe', function($scope, $swipe){
-		console.log("In Main controller");
 		$scope.flipped = false;
+		$scope.list1 = [{'title': 'Lolcat Shirt'},{'title': 'Cheezeburger Shirt'},{'title': 'Buckit Shirt'}];
+		$scope.list2 = [{'title': 'Zebra Striped'},{'title': 'Black Leather'},{'title': 'Alligator Leather'}];
+		$scope.list3 = [{'title': 'iPhone'},{'title': 'iPod'},{'title': 'iPad'}];
 
-
-		$scope.showMove = function(){
+		$scope.list4 = [];
+		$scope.showMove = function($event){
 			$scope.flipped = !$scope.flipped;
+			$scope.message = $event.type;
 			return $scope.flipped;
 		}
 	}])

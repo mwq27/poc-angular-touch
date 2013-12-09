@@ -1,7 +1,6 @@
-<main id="container" ng-swipe-left="showMove()" ng-swipe-right="showMove()">
+<main id="container" ng-class="" hm-swipe="showMove($event)" hm-hold="showMove($event)" hm-drag="showMove($event)">
     <div class="tile" ng-class="{ flipped : flipped }" tile-dir >
         <section class="front">Hello {{ message }}</section>
         <section class="back">Goodbye {{ message }}</section>
     </div>
 </main>
-
