@@ -6,11 +6,11 @@ angular.module('css3ExperimentsApp', ['ngRoute', 'ngAnimate','ngTouch','angular-
 		$routeProvider.when ('/',{
 				templateUrl: 'views/main.html',
 				controller: 'MainCtrl'
-		}).when('/drag', {
-				templateUrl: 'views/draganddrop.html',
-				controller: 'dragDrop'
-			})
-			.otherwise({
-				redirectTo: '/'
+	}).when('/drag', {
+			templateUrl: 'views/draganddrop.html',
+			controller: 'dragDrop'
 		})
+		.otherwise({
+			redirectTo: '/'
+	});
 }]);

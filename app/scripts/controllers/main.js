@@ -1,8 +1,9 @@
 /**
  * Created by mwoods0 on 12/8/13.
  */
+'use strict';
 angular.module('css3ExperimentsApp')
-	.controller('MainCtrl',['$scope','$swipe', function($scope, $swipe){
+	.controller('MainCtrl',['$scope', function($scope){
 		$scope.flipped = false;
 		$scope.list1 = [{'title': 'Lolcat Shirt'},{'title': 'Cheezeburger Shirt'},{'title': 'Buckit Shirt'}];
 		$scope.list2 = [{'title': 'Zebra Striped'},{'title': 'Black Leather'},{'title': 'Alligator Leather'}];
@@ -13,14 +14,14 @@ angular.module('css3ExperimentsApp')
 			$scope.flipped = !$scope.flipped;
 			$scope.message = $event.type;
 			return $scope.flipped;
-		}
+		};
 	}])
 	.directive('tileDir', function($animate, $swipe){
 		return {
 			link : function(scope, elem, attrs){
 				$swipe.bind(elem, {
 					start: function(coords){
-						scope.message = "Starting touch at " + coords.x;
+						scope.message = 'Starting touch at ' + coords.x;
 					},
 					move : function(){
 

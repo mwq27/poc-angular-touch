@@ -6,6 +6,7 @@ Just some proof of concepts for using the $swipe service in AngularJS, for learn
 To reiterate what is in the Angular Docs, the $swipe service is there to handle touch functionality in your angular app.
 
 $swipe has one method, __bind()__.  This method takes an element, and then an object with the 4 touch handler functions.
+The docs : http://docs.angularjs.org/api/ngTouch.$swipe
 
 It looks like this:
 ```

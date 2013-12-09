@@ -1,6 +1,7 @@
 /**
  * Created by mwoods0 on 12/8/13.
  */
+'use strict';
 angular.module('css3ExperimentsApp')
 	.controller('dragDrop',['$scope','$swipe', function($scope, $swipe){
 		$scope.list1 = [{'title': 'Lolcat Shirt'},{'title': 'Cheezeburger Shirt'},{'title': 'Buckit Shirt'}];
@@ -10,5 +11,5 @@ angular.module('css3ExperimentsApp')
 		$scope.list4 = [];
 		$scope.hideMe = function() {
 			return $scope.list4.length > 0;
-		}
+		};
 	}]);
